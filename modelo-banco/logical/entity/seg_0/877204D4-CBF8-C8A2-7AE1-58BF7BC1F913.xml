@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="877204D4-CBF8-C8A2-7AE1-58BF7BC1F913" name="Section">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 15:30:40 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="43428A0E-911C-20FD-C130-567662C514BC">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 15:30:52 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="color" id="073D5F48-7102-7B72-A653-9834944442FB">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 15:31:04 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="area" id="6AE2FF88-ADB4-C38E-E86C-052024A508A3">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 15:31:18 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="yard_id" id="D1FCC8D7-6089-EE97-CBC9-29FA5FC4A7D8">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 21:41:56 UTC</createdTime>
+<generatorID>572D1C83-45DC-AEB7-A7CE-C1011CDA2AB3</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<referedAttribute>5C211BFC-EE35-FD59-9F0B-770452B89AC4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85B8F747-5BD0-8546-293E-9AF230B5CF75" name="Setor PK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 15:31:00 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>43428A0E-911C-20FD-C130-567662C514BC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

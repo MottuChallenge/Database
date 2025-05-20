@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_12" directorySegmentName="seg_0" id="1C8D3F4E-C3AB-C4AF-0EC1-D1A8C42A5B9E">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-09 21:40:09 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<engineerTo>
+<item key="DA25C608-9EAF-D9A4-2174-0486F174F3A2" value="true"/>
+</engineerTo>
+<sourcePk>20AACC95-1EF2-E3DE-C361-AFC6273A715D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CB8C0315-07BF-23DB-939B-E9ED6A73969C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DC1EF611-D951-171D-5D99-3E77213D6E56</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
