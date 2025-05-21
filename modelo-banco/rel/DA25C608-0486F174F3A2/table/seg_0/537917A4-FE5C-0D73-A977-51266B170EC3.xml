@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="537917A4-FE5C-0D73-A977-51266B170EC3" name="Yard">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>DC1EF611-D951-171D-5D99-3E77213D6E56</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EFB4F270-2C81-0373-43DD-8D2B1F8A346A">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>5C211BFC-EE35-FD59-9F0B-770452B89AC4</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branch_id" id="FD893024-98AC-B24A-647A-8640BED709E6">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>AD428B84-EE20-0498-604C-E6101388C9D2</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="948DDE7D-0062-DF2F-11E2-31DD490CD978" referredColumn="B9CCB388-E139-A948-7D36-E9A01FC22387"/>
+</associations>
+</Column>
+<Column name="name" id="60009EC7-B85B-9F27-A9B4-2A7838106031">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>B1EFA7D0-BBF3-AF6F-4D03-1C5D0B36BF53</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address_id" id="E526EA38-80B0-B208-1702-444646B05E88">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>CEBE19B0-C294-6485-CD0A-6E4AA2A5060A</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D2D17D2A-3BCC-0304-1FC3-06357DA64A52" referredColumn="228E7347-9127-5977-325E-B4C7D069963E"/>
+</associations>
+</Column>
+<Column name="area" id="CCA3FA9D-BBD3-D629-6B37-4E7EBC78ABF1">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>2F4763BB-AFFE-F773-348D-03A3735BC7F2</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C19FB748-1AB7-9EFD-0882-8EB4B413E674" name="Yard_PK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>C48280FC-8950-1831-0014-EA1CC7F0A225</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFB4F270-2C81-0373-43DD-8D2B1F8A346A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5ACAE6B-1082-48F3-E3DD-5579D7F744D1" name="Yard__IDX">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>AE6DB43A-EF7C-FD1C-DD8B-730E4E52B2FD</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="E526EA38-80B0-B208-1702-444646B05E88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8183667-D4FC-FD70-D114-FF8D35B3572F" name="Yard_Branch_FK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>1C8D3F4E-C3AB-C4AF-0EC1-D1A8C42A5B9E</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD893024-98AC-B24A-647A-8640BED709E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB8878E4-1952-8693-1DD3-7D9AE8EBB196" name="Yard_Address_FK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>AE6DB43A-EF7C-FD1C-DD8B-730E4E52B2FD</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E526EA38-80B0-B208-1702-444646B05E88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

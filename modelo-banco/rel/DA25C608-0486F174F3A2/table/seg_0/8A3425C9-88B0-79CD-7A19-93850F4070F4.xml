@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8A3425C9-88B0-79CD-7A19-93850F4070F4" name="Logs">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>F135D6DB-CB7B-C856-9677-BE9B8A847327</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="0CA94542-C0F4-170E-A588-5880FCD18AAF">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>5920A7BD-C991-DC6A-1107-E790C4563914</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="motorcycle_id" id="3BB5D29F-CE6D-751B-44AF-5821EC419A87">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>8A95F4C5-C89F-B386-2182-BFB798E9AB7A</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC98ECC3-1336-0B54-2573-EB237E3CCE4C" referredColumn="E8AAE403-3C28-39AB-7E37-13CFED03AD06"/>
+</associations>
+</Column>
+<Column name="mensage" id="5727AA03-0447-5BC2-0C35-B3E81805EAA6">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>0F0CCB96-5DFF-1778-1B33-E095EEAB2677</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="72F33307-738C-EBCC-CEDF-176773601C14">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>29494321-60B4-7E42-8133-560AAFCA4934</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D58AD82B-19AA-B3A3-9BB1-F459AADD2DBA" name="Logs_PK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>B21481F6-4B28-13AB-0B38-6874D902CAB3</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0CA94542-C0F4-170E-A588-5880FCD18AAF"/>
+<colUsage columnID="3BB5D29F-CE6D-751B-44AF-5821EC419A87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5E9A7E1-7CB2-FBF9-3150-5F3B4576D4ED" name="Logs_Motorcycle_FK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>52A71A9F-7E18-3264-6713-5BC9D7A66598</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BB5D29F-CE6D-751B-44AF-5821EC419A87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

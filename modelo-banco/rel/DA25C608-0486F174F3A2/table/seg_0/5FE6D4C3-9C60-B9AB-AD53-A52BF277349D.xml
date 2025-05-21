@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5FE6D4C3-9C60-B9AB-AD53-A52BF277349D" name="Motorcycle">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>0A5F3A20-1881-B0E0-379F-7A7156A1C32A</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E8AAE403-3C28-39AB-7E37-13CFED03AD06">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>AF9A086B-5E0D-01F2-4E8E-6877B263FB57</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="model" id="C9E3DF02-F299-2183-903D-19EE1F9279CB">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>42FB406A-21EF-A1A5-8252-27F9C52F2AD3</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="engine_type" id="B6F53E09-DAC2-7B25-662D-5234952A9D6D">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>8874A4A7-0DB9-4E93-2825-37A01F5E74B6</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plate" id="004112BE-B010-DA43-0AE7-F978B9F3A70B">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>251333C6-B88E-0F18-8511-FD7EA0F6FEB4</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_revision_date" id="30479D33-3CF4-0342-7654-8FF061F81E46">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>9327DA2B-F0F6-1BDC-0B41-1BB44AF04E8D</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="section_id" id="B91EA65B-758F-12B5-427C-AA797DD4672A">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>511B70FB-FB77-69B2-5F66-3A63086F310A</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-4BABEC65-108B-2A3C-F7C4-84AC47D292B0@LOGDT10040</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D815BCD6-3997-2001-70A4-68F210DF4406" referredColumn="E0424D84-6EC0-1564-E014-E3800A1DA686"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="650980FE-2164-34D2-5B8B-48F813554AE3" name="Motorcycle_PK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>5B2F538B-B4A3-F31D-C321-7BF90EF3D0BF</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8AAE403-3C28-39AB-7E37-13CFED03AD06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7703885-4077-210C-F03C-9E0800FEB3F9" name="Motorcycle_Section_FK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>95EE666E-56BA-0989-018A-4EB7A052087A</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B91EA65B-758F-12B5-427C-AA797DD4672A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

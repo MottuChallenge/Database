@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D815BCD6-3997-2001-70A4-68F210DF4406" containerWithKeyObject="5FE6D4C3-9C60-B9AB-AD53-A52BF277349D" localFKIndex="D7703885-4077-210C-F03C-9E0800FEB3F9" name="Motorcycle_Section_FK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-05-21 13:37:44 UTC</createdTime>
+<generatorID>95EE666E-56BA-0989-018A-4EB7A052087A</generatorID>
+<ownerDesignName>modelo-banco</ownerDesignName>
+<referredTableLongName>Section</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>663F907F-B1FD-782B-6258-044D748EC590</referredTableID>
+<keyObject>17BC63ED-E3F5-37C1-7D36-99E75F043F15</keyObject>
+<referredKeyID>17BC63ED-E3F5-37C1-7D36-99E75F043F15</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
