@@ -1,96 +1,69 @@
--- Insert data into address
-INSERT INTO address (id, street, "number", neighborhood, city, state, postal_code, country)
-VALUES (SYS_GUID(), 'Avenida Paulista', '123', 'Bela Vista', 'São Paulo', 'SP', '01311-000', 'Brazil');
- 
-INSERT INTO address (id, street, "number", neighborhood, city, state, postal_code, country)
-VALUES (SYS_GUID(), 'Rua Augusta', '456', 'Consolação', 'São Paulo', 'SP', '01305-000', 'Brazil');
- 
-INSERT INTO address (id, street, "number", neighborhood, city, state, postal_code, country)
-VALUES (SYS_GUID(), 'Rua Oscar Freire', '789', 'Jardins', 'São Paulo', 'SP', '01426-001', 'Brazil');
- 
-INSERT INTO address (id, street, "number", neighborhood, city, state, postal_code, country)
-VALUES (SYS_GUID(), 'Avenida Brigadeiro Faria Lima', '101', 'Itaim Bibi', 'São Paulo', 'SP', '01452-911', 'Brazil');
- 
-INSERT INTO address (id, street, "number", neighborhood, city, state, postal_code, country)
-VALUES (SYS_GUID(), 'Avenida Ibirapuera', '202', 'Moema', 'São Paulo', 'SP', '04029-200', 'Brazil');
- 
- 
--- Insert data into branch
-INSERT INTO branch (id, name, phone, email, cnpj, address_id)
-VALUES (SYS_GUID(), 'Motos SP', '11987654321', 'contato@motossp.com', '12345678901234', (SELECT id FROM address WHERE street = 'Avenida Paulista'));
- 
-INSERT INTO branch (id, name, phone, email, cnpj, address_id)
-VALUES (SYS_GUID(), 'Moto Clube', '11912345678', 'contato@motoclube.com', '23456789012345', (SELECT id FROM address WHERE street = 'Rua Augusta'));
- 
-INSERT INTO branch (id, name, phone, email, cnpj, address_id)
-VALUES (SYS_GUID(), 'Speed Motors', '11955556666', 'contato@speedmotors.com', '34567890123456', (SELECT id FROM address WHERE street = 'Rua Oscar Freire'));
- 
-INSERT INTO branch (id, name, phone, email, cnpj, address_id)
-VALUES (SYS_GUID(), 'Veloz Motos', '11944443333', 'contato@velozmotos.com', '45678901234567', (SELECT id FROM address WHERE street = 'Avenida Brigadeiro Faria Lima'));
- 
-INSERT INTO branch (id, name, phone, email, cnpj, address_id)
-VALUES (SYS_GUID(), 'Moto Express', '11999998888', 'contato@motoexpress.com', '56789012345678', (SELECT id FROM address WHERE street = 'Avenida Ibirapuera'));
- 
--- Insert data into yard
-INSERT INTO yard (id, branch_id, name, address_id, area)
-VALUES (SYS_GUID(), (SELECT id FROM branch WHERE name = 'Motos SP'), 'Central Yard', (SELECT id FROM address WHERE street = 'Avenida Paulista'), 100.0);
- 
-INSERT INTO yard (id, branch_id, name, address_id, area)
-VALUES (SYS_GUID(), (SELECT id FROM branch WHERE name = 'Moto Clube'), 'East Yard', (SELECT id FROM address WHERE street = 'Rua Augusta'), 120.5);
- 
-INSERT INTO yard (id, branch_id, name, address_id, area)
-VALUES (SYS_GUID(), (SELECT id FROM branch WHERE name = 'Speed Motors'), 'West Yard', (SELECT id FROM address WHERE street = 'Rua Oscar Freire'), 90.2);
- 
-INSERT INTO yard (id, branch_id, name, address_id, area)
-VALUES (SYS_GUID(), (SELECT id FROM branch WHERE name = 'Veloz Motos'), 'South Yard', (SELECT id FROM address WHERE street = 'Avenida Brigadeiro Faria Lima'), 140.8);
- 
-INSERT INTO yard (id, branch_id, name, address_id, area)
-VALUES (SYS_GUID(), (SELECT id FROM branch WHERE name = 'Moto Express'), 'North Yard', (SELECT id FROM address WHERE street = 'Avenida Ibirapuera'), 110.70);
- 
--- Insert data into section
-INSERT INTO section (id, color, area, yard_id)
-VALUES (SYS_GUID(), 'Red', 50.5, (SELECT id FROM yard WHERE name = 'Central Yard'));
- 
-INSERT INTO section (id, color, area, yard_id)
-VALUES (SYS_GUID(), 'Blue', 60.0, (SELECT id FROM yard WHERE name = 'East Yard'));
- 
-INSERT INTO section (id, color, area, yard_id)
-VALUES (SYS_GUID(), 'Green', 45.7, (SELECT id FROM yard WHERE name = 'West Yard'));
- 
-INSERT INTO section (id, color, area, yard_id)
-VALUES (SYS_GUID(), 'Black', 80.3, (SELECT id FROM yard WHERE name = 'South Yard'));
- 
-INSERT INTO section (id, color, area, yard_id)
-VALUES (SYS_GUID(), 'White', 92.1, (SELECT id FROM yard WHERE name = 'North Yard'));
- 
--- Insert data into motorcycle
-INSERT INTO motorcycle (id, model, engine_type, plate, last_revision_date, section_id)
-VALUES (SYS_GUID(), 'Honda CB500F', 'DOHC', 'ABC-1234', TO_DATE('2025-01-15', 'YYYY-MM-DD'), (SELECT id FROM section WHERE color = 'Red'));
- 
-INSERT INTO motorcycle (id, model, engine_type, plate, last_revision_date, section_id)
-VALUES (SYS_GUID(), 'Yamaha MT-03', 'DOHC', 'XYZ-5678', TO_DATE('2025-02-10', 'YYYY-MM-DD'), (SELECT id FROM section WHERE color = 'Blue'));
- 
-INSERT INTO motorcycle (id, model, engine_type, plate, last_revision_date, section_id)
-VALUES (SYS_GUID(), 'Kawasaki Z400', 'DOHC', 'LMN-3456', TO_DATE('2025-03-20', 'YYYY-MM-DD'), (SELECT id FROM section WHERE color = 'Green'));
- 
-INSERT INTO motorcycle (id, model, engine_type, plate, last_revision_date, section_id)
-VALUES (SYS_GUID(), 'Suzuki GSX-S750', 'DOHC', 'PQR-6789', TO_DATE('2025-04-05', 'YYYY-MM-DD'), (SELECT id FROM section WHERE color = 'Black'));
- 
-INSERT INTO motorcycle (id, model, engine_type, plate, last_revision_date, section_id)
-VALUES (SYS_GUID(), 'Ducati Monster 797', 'L-Twin', 'STU-9012', TO_DATE('2025-05-10', 'YYYY-MM-DD'), (SELECT id FROM section WHERE color = 'White'));
- 
--- Insert data into logs
-INSERT INTO logs (id, motorcycle_id, mensage, created_at)
-VALUES (SYS_GUID(), (SELECT id FROM motorcycle WHERE plate = 'ABC-1234'), 'Revisão realizada com sucesso', SYSDATE);
- 
-INSERT INTO logs (id, motorcycle_id, mensage, created_at)
-VALUES (SYS_GUID(), (SELECT id FROM motorcycle WHERE plate = 'XYZ-5678'), 'Troca de óleo efetuada', SYSDATE - 10);
- 
-INSERT INTO logs (id, motorcycle_id, mensage, created_at)
-VALUES (SYS_GUID(), (SELECT id FROM motorcycle WHERE plate = 'LMN-3456'), 'Pneu traseiro substituído', SYSDATE - 20);
- 
-INSERT INTO logs (id, motorcycle_id, mensage, created_at)
-VALUES (SYS_GUID(), (SELECT id FROM motorcycle WHERE plate = 'PQR-6789'), 'Lavagem e lubrificação', SYSDATE - 30);
- 
-INSERT INTO logs (id, motorcycle_id, mensage, created_at)
-VALUES (SYS_GUID(), (SELECT id FROM motorcycle WHERE plate = 'STU-9012'), 'Inspeção de freios realizada', SYSDATE - 40);
+-- INSERTS PARA addresses
+INSERT INTO addresses VALUES ('11111111-1111-1111-1111-111111111111', 'Main St', 100, 'Downtown', 'Metropolis', 'StateA', '12345678', 'CountryX');
+INSERT INTO addresses VALUES ('22222222-2222-2222-2222-222222222222', 'Second Ave', 200, 'Uptown', 'Gotham', 'StateB', '87654321', 'CountryY');
+INSERT INTO addresses VALUES ('33333333-3333-3333-3333-333333333333', 'Third Blvd', 300, 'Midtown', 'Star City', 'StateC', '11223344', 'CountryZ');
+INSERT INTO addresses VALUES ('44444444-4444-4444-4444-444444444444', 'Fourth Rd', 400, 'Oldtown', 'Central City', 'StateD', '44332211', 'CountryW');
+INSERT INTO addresses VALUES ('55555555-5555-5555-5555-555555555555', 'Fifth Ln', 500, 'Newtown', 'Coast City', 'StateE', '55667788', 'CountryV');
+
+-- INSERTS PARA sector_types
+INSERT INTO sector_types VALUES ('aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaa1', 'Type A');
+INSERT INTO sector_types VALUES ('aaaaaaa2-aaaa-aaaa-aaaa-aaaaaaaaaaa2', 'Type B');
+INSERT INTO sector_types VALUES ('aaaaaaa3-aaaa-aaaa-aaaa-aaaaaaaaaaa3', 'Type C');
+INSERT INTO sector_types VALUES ('aaaaaaa4-aaaa-aaaa-aaaa-aaaaaaaaaaa4', 'Type D');
+INSERT INTO sector_types VALUES ('aaaaaaa5-aaaa-aaaa-aaaa-aaaaaaaaaaa5', 'Type E');
+
+-- INSERTS PARA yards
+INSERT INTO yards VALUES ('yard0001-0000-0000-0000-000000000001', 'Yard One', '11111111-1111-1111-1111-111111111111');
+INSERT INTO yards VALUES ('yard0002-0000-0000-0000-000000000002', 'Yard Two', '22222222-2222-2222-2222-222222222222');
+INSERT INTO yards VALUES ('yard0003-0000-0000-0000-000000000003', 'Yard Three', '33333333-3333-3333-3333-333333333333');
+INSERT INTO yards VALUES ('yard0004-0000-0000-0000-000000000004', 'Yard Four', '44444444-4444-4444-4444-444444444444');
+INSERT INTO yards VALUES ('yard0005-0000-0000-0000-000000000005', 'Yard Five', '55555555-5555-5555-5555-555555555555');
+
+-- INSERTS PARA sectors
+INSERT INTO sectors VALUES ('sect0001-0000-0000-0000-000000000001', 'yard0001-0000-0000-0000-000000000001', 'aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaa1');
+INSERT INTO sectors VALUES ('sect0002-0000-0000-0000-000000000002', 'yard0002-0000-0000-0000-000000000002', 'aaaaaaa2-aaaa-aaaa-aaaa-aaaaaaaaaaa2');
+INSERT INTO sectors VALUES ('sect0003-0000-0000-0000-000000000003', 'yard0003-0000-0000-0000-000000000003', 'aaaaaaa3-aaaa-aaaa-aaaa-aaaaaaaaaaa3');
+INSERT INTO sectors VALUES ('sect0004-0000-0000-0000-000000000004', 'yard0004-0000-0000-0000-000000000004', 'aaaaaaa4-aaaa-aaaa-aaaa-aaaaaaaaaaa4');
+INSERT INTO sectors VALUES ('sect0005-0000-0000-0000-000000000005', 'yard0005-0000-0000-0000-000000000005', 'aaaaaaa5-aaaa-aaaa-aaaa-aaaaaaaaaaa5');
+
+-- INSERTS PARA spots
+INSERT INTO spots VALUES ('spot0001-0000-0000-0000-000000000001', 'sect0001-0000-0000-0000-000000000001', 10, 20, 'free', NULL);
+INSERT INTO spots VALUES ('spot0002-0000-0000-0000-000000000002', 'sect0002-0000-0000-0000-000000000002', 15, 25, 'occupied', NULL);
+INSERT INTO spots VALUES ('spot0003-0000-0000-0000-000000000003', 'sect0003-0000-0000-0000-000000000003', 20, 30, 'free', NULL);
+INSERT INTO spots VALUES ('spot0004-0000-0000-0000-000000000004', 'sect0004-0000-0000-0000-000000000004', 25, 35, 'occupied', NULL);
+INSERT INTO spots VALUES ('spot0005-0000-0000-0000-000000000005', 'sect0005-0000-0000-0000-000000000005', 30, 40, 'free', NULL);
+
+-- INSERTS PARA Motorcycles
+INSERT INTO Motorcycles VALUES ('moto0001-0000-0000-0000-000000000001', 'Model X', 'V2', 'ABC1234', TO_DATE('2024-01-01','YYYY-MM-DD'), 'spot0001-0000-0000-0000-000000000001');
+INSERT INTO Motorcycles VALUES ('moto0002-0000-0000-0000-000000000002', 'Model Y', 'V4', 'DEF5678', TO_DATE('2024-02-01','YYYY-MM-DD'), 'spot0002-0000-0000-0000-000000000002');
+INSERT INTO Motorcycles VALUES ('moto0003-0000-0000-0000-000000000003', 'Model Z', 'V6', 'GHI9012', TO_DATE('2024-03-01','YYYY-MM-DD'), 'spot0003-0000-0000-0000-000000000003');
+INSERT INTO Motorcycles VALUES ('moto0004-0000-0000-0000-000000000004', 'Model W', 'V8', 'JKL3456', TO_DATE('2024-04-01','YYYY-MM-DD'), 'spot0004-0000-0000-0000-000000000004');
+INSERT INTO Motorcycles VALUES ('moto0005-0000-0000-0000-000000000005', 'Model V', 'Electric', 'MNO7890', TO_DATE('2024-05-01','YYYY-MM-DD'), 'spot0005-0000-0000-0000-000000000005');
+
+-- Atualize os spots para associar as motos
+UPDATE spots SET motorcycle_id = 'moto0001-0000-0000-0000-000000000001' WHERE spot_id = 'spot0001-0000-0000-0000-000000000001';
+UPDATE spots SET motorcycle_id = 'moto0002-0000-0000-0000-000000000002' WHERE spot_id = 'spot0002-0000-0000-0000-000000000002';
+UPDATE spots SET motorcycle_id = 'moto0003-0000-0000-0000-000000000003' WHERE spot_id = 'spot0003-0000-0000-0000-000000000003';
+UPDATE spots SET motorcycle_id = 'moto0004-0000-0000-0000-000000000004' WHERE spot_id = 'spot0004-0000-0000-0000-000000000004';
+UPDATE spots SET motorcycle_id = 'moto0005-0000-0000-0000-000000000005' WHERE spot_id = 'spot0005-0000-0000-0000-000000000005';
+
+-- INSERTS PARA logs
+INSERT INTO logs VALUES ('log0001-0000-0000-0000-000000000001', 'Moved to new spot', TO_DATE('2024-06-01','YYYY-MM-DD'), 'moto0001-0000-0000-0000-000000000001', 'spot0001-0000-0000-0000-000000000001', 'spot0002-0000-0000-0000-000000000002');
+INSERT INTO logs VALUES ('log0002-0000-0000-0000-000000000002', 'Routine check', TO_DATE('2024-06-02','YYYY-MM-DD'), 'moto0002-0000-0000-0000-000000000002', 'spot0002-0000-0000-0000-000000000002', 'spot0003-0000-0000-0000-000000000003');
+INSERT INTO logs VALUES ('log0003-0000-0000-0000-000000000003', 'Maintenance', TO_DATE('2024-06-03','YYYY-MM-DD'), 'moto0003-0000-0000-0000-000000000003', 'spot0003-0000-0000-0000-000000000003', 'spot0004-0000-0000-0000-000000000004');
+INSERT INTO logs VALUES ('log0004-0000-0000-0000-000000000004', 'Inspection', TO_DATE('2024-06-04','YYYY-MM-DD'), 'moto0004-0000-0000-0000-000000000004', 'spot0004-0000-0000-0000-000000000004', 'spot0005-0000-0000-0000-000000000005');
+INSERT INTO logs VALUES ('log0005-0000-0000-0000-000000000005', 'Returned', TO_DATE('2024-06-05','YYYY-MM-DD'), 'moto0005-0000-0000-0000-000000000005', 'spot0005-0000-0000-0000-000000000005', 'spot0001-0000-0000-0000-000000000001');
+
+-- INSERTS PARA sector_points
+INSERT INTO sector_points VALUES ('spnt0001-0000-0000-0000-000000000001', 'sect0001-0000-0000-0000-000000000001', 1, 10, 20);
+INSERT INTO sector_points VALUES ('spnt0002-0000-0000-0000-000000000002', 'sect0002-0000-0000-0000-000000000002', 2, 15, 25);
+INSERT INTO sector_points VALUES ('spnt0003-0000-0000-0000-000000000003', 'sect0003-0000-0000-0000-000000000003', 3, 20, 30);
+INSERT INTO sector_points VALUES ('spnt0004-0000-0000-0000-000000000004', 'sect0004-0000-0000-0000-000000000004', 4, 25, 35);
+INSERT INTO sector_points VALUES ('spnt0005-0000-0000-0000-000000000005', 'sect0005-0000-0000-0000-000000000005', 5, 30, 40);
+
+-- INSERTS PARA yard_points
+INSERT INTO yard_points VALUES ('ypnt0001-0000-0000-0000-000000000001', 'yard0001-0000-0000-0000-000000000001', 1, 100, 200);
+INSERT INTO yard_points VALUES ('ypnt0002-0000-0000-0000-000000000002', 'yard0002-0000-0000-0000-000000000002', 2, 150, 250);
+INSERT INTO yard_points VALUES ('ypnt0003-0000-0000-0000-000000000003', 'yard0003-0000-0000-0000-000000000003', 3, 200, 300);
+INSERT INTO yard_points VALUES ('ypnt0004-0000-0000-0000-000000000004', 'yard0004-0000-0000-0000-000000000004', 4, 250, 350);
+INSERT INTO yard_points VALUES ('ypnt0005-0000-0000-0000-000000000005', 'yard0005-0000-0000-0000-000000000005', 5, 300, 400);
