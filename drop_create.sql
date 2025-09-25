@@ -8,10 +8,11 @@ DROP TABLE sector_types CASCADE CONSTRAINTS;
 DROP TABLE yards CASCADE CONSTRAINTS;
 DROP TABLE addresses CASCADE CONSTRAINTS;
 
+
 CREATE TABLE addresses (
     id CHAR(36) PRIMARY KEY,
     street VARCHAR2(150) NOT NULL,
-    number NUMBER NOT NULL,
+    number_address NUMBER NOT NULL,
     neighborhood VARCHAR2(100) NOT NULL,
     city VARCHAR2(100) NOT NULL,
     state VARCHAR2(50) NOT NULL,
@@ -19,7 +20,7 @@ CREATE TABLE addresses (
     country VARCHAR2(100) NOT NULL
 );
 
-CREATE TaABLE sector_types (
+CREATE TABLE sector_types (
     id CHAR(36) PRIMARY KEY,
     name VARCHAR2(100) NOT NULL
 );
@@ -44,7 +45,7 @@ CREATE TABLE spots (
     sector_id CHAR(36) NOT NULL,
     x NUMBER NOT NULL,
     y NUMBER NOT NULL,
-    status CLOB NOT NULL,
+    status VARCHAR2(50) NOT NULL,
     motorcycle_id CHAR(36),
     CONSTRAINT fk_spots_sector FOREIGN KEY (sector_id) REFERENCES sectors(id)
 );
@@ -52,7 +53,7 @@ CREATE TABLE spots (
 CREATE TABLE Motorcycles (
     id CHAR(36) PRIMARY KEY,
     model VARCHAR2(100) NOT NULL,
-    enginetype CLOB NOT NULL,
+    enginetype VARCHAR2(50) NOT NULL,
     plate VARCHAR2(8) NOT NULL,
     lastrevisiondate DATE NOT NULL,
     spotid CHAR(36) NOT NULL UNIQUE,
