@@ -83,9 +83,9 @@ DECLARE
       sec.id AS sector_id,
       sec_type.name AS sector_type,
       y.name AS yard_name,
-      sec.id,
-      sec_type.name,
-      y.name
+      sec.id AS sector_id_repeat,  -- Alias para a segunda coluna sec.id
+      sec_type.name AS sector_type_repeat, -- Alias para a segunda coluna sec_type.name
+      y.name AS yard_name_repeat  -- Alias para a segunda coluna y.name
     FROM sectors sec
     JOIN sector_types sec_type ON sec.sector_type_id = sec_type.id
     JOIN yards y ON sec.yard_id = y.id

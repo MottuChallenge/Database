@@ -19,12 +19,21 @@ BEGIN
 EXCEPTION
   WHEN VALUE_ERROR THEN
     RETURN '{"error":"VALUE_ERROR"}';
-  WHEN OTHERS THEN
-    RETURN '{"error":"UNEXPECTED_ERROR"}';
   WHEN NO_DATA_FOUND THEN
     RETURN '{"error":"NO_DATA_FOUND"}';
+  WHEN OTHERS THEN
+    RETURN '{"error":"UNEXPECTED_ERROR"}';
 END;
 /
+
+SELECT fn_relational_to_json(
+          'moto0001-0000-0000-0000-000000000001', 
+          'Model X', 
+          'V2', 
+          'ABC1234', 
+          TO_DATE('2024-01-01','YYYY-MM-DD')
+        ) 
+FROM dual;
 
 -- Função 2: Validação de Placa de Moto
 CREATE OR REPLACE FUNCTION fn_validate_plate(p_plate IN VARCHAR2) RETURN NUMBER IS
@@ -41,10 +50,12 @@ EXCEPTION
     RETURN -1;
   WHEN OTHERS THEN
     RETURN -2;
-  WHEN NO_DATA_FOUND THEN
-    RETURN -3;
 END;
 /
+
+SELECT fn_validate_plate('ABC1234') 
+FROM dual;
+
 
 -- Procedimento 1: JOIN + JSON Manual + 3 Exceções
 CREATE OR REPLACE PROCEDURE prc_motorcycle_json IS
@@ -71,6 +82,9 @@ EXCEPTION
     DBMS_OUTPUT.PUT_LINE('{"error":"UNEXPECTED_ERROR"}');
 END;
 /
+SET SERVEROUTPUT ON;
+EXEC prc_motorcycle_json;
+
 
 -- Procedimento 2: Soma Manual, Subtotal, Total, 3 Exceções
 CREATE OR REPLACE PROCEDURE prc_logs_summary IS
@@ -113,6 +127,9 @@ EXCEPTION
 END;
 /
 
+EXEC prc_logs_summary;
+
+
 -- Trigger de Auditoria
 CREATE TABLE audit_motorcycles (
   audit_id NUMBER GENERATED ALWAYS AS IDENTITY,
@@ -129,35 +146,59 @@ FOR EACH ROW
 DECLARE
   v_user VARCHAR2(100);
 BEGIN
-  v_user := SYS_CONTEXT('USERENV', 'SESSION_USER');
+  -- Defina um valor fixo para o "usuário", ou use NULL caso não queira inserir nada
+  v_user := 'default_user';  -- OU v_user := NULL;
+  
   INSERT INTO audit_motorcycles (
-    username, operation, operation_date, old_values, new_values
-  ) VALUES (
+    username, 
+    operation, 
+    operation_date, 
+    old_values, 
+    new_values
+  ) 
+  VALUES (
     v_user,
     CASE
       WHEN INSERTING THEN 'INSERT'
       WHEN UPDATING THEN 'UPDATE'
       WHEN DELETING THEN 'DELETE'
+      ELSE NULL  -- Garantindo que o valor seja atribuído corretamente
     END,
     SYSDATE,
-    CASE WHEN DELETING OR UPDATING THEN
-      '{' ||
-      '"id":"' || :OLD.id || '",' ||
-      '"model":"' || :OLD.model || '",' ||
-      '"enginetype":"' || :OLD.enginetype || '",' ||
-      '"plate":"' || :OLD.plate || '",' ||
-      '"lastrevisiondate":"' || TO_CHAR(:OLD.lastrevisiondate, 'YYYY-MM-DD') || '"' ||
-      '}'
-    ELSE NULL END,
-    CASE WHEN INSERTING OR UPDATING THEN
-      '{' ||
-      '"id":"' || :NEW.id || '",' ||
-      '"model":"' || :NEW.model || '",' ||
-      '"enginetype":"' || :NEW.enginetype || '",' ||
-      '"plate":"' || :NEW.plate || '",' ||
-      '"lastrevisiondate":"' || TO_CHAR(:NEW.lastrevisiondate, 'YYYY-MM-DD') || '"' ||
-      '}'
-    ELSE NULL END
+    -- OLD Values (para UPDATE e DELETE)
+    CASE 
+      WHEN DELETING THEN
+        '{' ||
+        '"id":"' || :OLD.id || '",' ||
+        '"model":"' || :OLD.model || '",' ||
+        '"enginetype":"' || :OLD.enginetype || '",' ||
+        '"plate":"' || :OLD.plate || '",' ||
+        '"lastrevisiondate":"' || TO_CHAR(:OLD.lastrevisiondate, 'YYYY-MM-DD') || '"' ||
+        '}'
+      WHEN UPDATING THEN
+        '{' ||
+        '"id":"' || :OLD.id || '",' ||
+        '"model":"' || :OLD.model || '",' ||
+        '"enginetype":"' || :OLD.enginetype || '",' ||
+        '"plate":"' || :OLD.plate || '",' ||
+        '"lastrevisiondate":"' || TO_CHAR(:OLD.lastrevisiondate, 'YYYY-MM-DD') || '"' ||
+        '}'
+      ELSE NULL
+    END,
+    -- NEW Values (para INSERT e UPDATE)
+    CASE 
+      WHEN INSERTING OR UPDATING THEN
+        '{' ||
+        '"id":"' || :NEW.id || '",' ||
+        '"model":"' || :NEW.model || '",' ||
+        '"enginetype":"' || :NEW.enginetype || '",' ||
+        '"plate":"' || :NEW.plate || '",' ||
+        '"lastrevisiondate":"' || TO_CHAR(:NEW.lastrevisiondate, 'YYYY-MM-DD') || '"' ||
+        '}'
+      ELSE NULL
+    END
   );
 END;
 /
+
+INSERT INTO Motorcycles VALUES ('moto0006-0000-0000-0000-000000000006', 'Model A', 'V4', 'JKL6789', TO_DATE('2024-06-01', 'YYYY-MM-DD'), 'spot0001-0000-0000-0000-000000000001');
