@@ -47,7 +47,8 @@ CREATE TABLE spots (
     y NUMBER NOT NULL,
     status VARCHAR2(50) NOT NULL,
     motorcycle_id CHAR(36),
-    CONSTRAINT fk_spots_sector FOREIGN KEY (sector_id) REFERENCES sectors(id)
+    CONSTRAINT fk_spots_sector FOREIGN KEY (sector_id) REFERENCES sectors(id),
+    CONSTRAINT chk_spots_status CHECK (status IN ('FREE', 'OCCUPIED', 'RESERVED'))
 );
 
 CREATE TABLE Motorcycles (
@@ -56,8 +57,9 @@ CREATE TABLE Motorcycles (
     enginetype VARCHAR2(50) NOT NULL,
     plate VARCHAR2(8) NOT NULL,
     lastrevisiondate DATE NOT NULL,
-    spotid CHAR(36) NOT NULL UNIQUE,
-    CONSTRAINT fk_motorcycles_spot FOREIGN KEY (spotid) REFERENCES spots(spot_id)
+    spotid CHAR(36) UNIQUE,
+    CONSTRAINT fk_motorcycles_spot FOREIGN KEY (spotid) REFERENCES spots(spot_id),
+    CONSTRAINT chk_motorcycles_enginetype CHECK (enginetype IN ('COMBUSTION', 'ELECTRIC'))
 );
 
 CREATE TABLE logs (

@@ -1,6 +1,6 @@
 SET SERVEROUTPUT ON;
 
--- 1. Motores por tipo, ano de revisão, setor e pátio (3 JOINs)
+-- 1. Motores por tipo, ano de revisÃ£o, setor e pÃ¡tio (3 JOINs)
 BEGIN
   FOR rec IN (
     SELECT 
@@ -26,7 +26,7 @@ BEGIN
 END;
 /
 
--- 2. Pátios, total de setores, área total dos setores, tipo de setor e cidade (3 JOINs)
+-- 2. PÃ¡tios, total de setores, Ã¡rea total dos setores, tipo de setor e cidade (3 JOINs)
 BEGIN
   FOR rec IN (
     SELECT 
@@ -52,7 +52,7 @@ BEGIN
 END;
 /
 
--- 3. Cidades, total de pátios, total de setores, total de motos (3 JOINs)
+-- 3. Cidades, total de pÃ¡tios, total de setores, total de motos (3 JOINs)
 BEGIN
   FOR rec IN (
     SELECT 
@@ -76,30 +76,18 @@ BEGIN
 END;
 /
 
--- 4. Exibir setores, tipo, pátio, área anterior, atual e próxima (3 JOINs)
 DECLARE
   CURSOR c_sectors IS
     SELECT 
       sec.id AS sector_id,
-      sec_type.name AS sector_type,
-      y.name AS yard_name,
-      sec.id AS sector_id_repeat,  -- Alias para a segunda coluna sec.id
-      sec_type.name AS sector_type_repeat, -- Alias para a segunda coluna sec_type.name
-      y.name AS yard_name_repeat  -- Alias para a segunda coluna y.name
+      sec.id AS sector_id_repeat  -- Alias para a segunda coluna sec.id
     FROM sectors sec
-    JOIN sector_types sec_type ON sec.sector_type_id = sec_type.id
-    JOIN yards y ON sec.yard_id = y.id
     ORDER BY sec.id;
 
   TYPE id_table IS TABLE OF sectors.id%TYPE INDEX BY PLS_INTEGER;
-  TYPE type_table IS TABLE OF sector_types.name%TYPE INDEX BY PLS_INTEGER;
-  TYPE yard_table IS TABLE OF yards.name%TYPE INDEX BY PLS_INTEGER;
 
   ids        id_table;
-  types      type_table;
-  yards_arr  yard_table;
   total      INTEGER := 0;
-
   v_prev_id  sectors.id%TYPE;
   v_next_id  sectors.id%TYPE;
 BEGIN
@@ -107,12 +95,10 @@ BEGIN
   FOR rec IN c_sectors LOOP
     total := total + 1;
     ids(total) := rec.sector_id;
-    types(total) := rec.sector_type;
-    yards_arr(total) := rec.yard_name;
   END LOOP;
 
   -- Cabeçalho
-  DBMS_OUTPUT.PUT_LINE(RPAD('Setor', 38) || RPAD('Anterior', 38) || RPAD('Atual', 38) || RPAD('Próximo', 38) || RPAD('Tipo', 12) || 'Pátio');
+  DBMS_OUTPUT.PUT_LINE(RPAD('Setor', 38) || RPAD('Anterior', 38) || RPAD('Atual', 38) || RPAD('Próximo', 38));
 
   FOR i IN 1..total LOOP
     -- Anterior
@@ -133,10 +119,8 @@ BEGIN
       RPAD(ids(i), 38) ||
       RPAD(NVL(v_prev_id, 'Vazio'), 38) ||
       RPAD(ids(i), 38) ||
-      RPAD(NVL(v_next_id, 'Vazio'), 38) ||
-      RPAD(types(i), 12) ||
-      yards_arr(i)
-    );
+      RPAD(NVL(v_next_id, 'Vazio'), 38)
+      );
   END LOOP;
 END;
 /
