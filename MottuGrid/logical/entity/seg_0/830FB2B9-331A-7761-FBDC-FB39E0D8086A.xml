@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="830FB2B9-331A-7761-FBDC-FB39E0D8086A" name="Motorcycles">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>BD86232B-B1F6-90BB-9643-10FBE8FFAA34</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="BBD1CDE3-DB5D-5669-D180-E165141033BD">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>C58449DD-F9FC-B8CD-90EE-505DD57F5D4B</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="model" id="2D6D3376-1472-E0F6-9136-68B676371796">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>670D40F7-0728-112B-4133-66F6E4EBFC97</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>BA76707F-AD32-B547-85F0-CD4BA2714FDB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="enginetype" id="39AC8E68-D13D-5610-B9C1-C8681E7AAB22">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>4BEAEBF3-8727-7E57-A5AE-1DEDF03E3A3D</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A663E47B-8545-C513-774E-BB14752E53E6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plate" id="A8186CA4-EB87-8555-3518-8EB5B2532770">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>E3801881-B228-ABBB-49F7-8D1BB96D93D2</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F252ECB7-26D8-4B4E-534B-84FF739585C7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lastrevisiondate" id="3CBC4ACF-B24E-188B-8D43-DD2A728F8945">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>4B1BA693-E894-01E9-8D83-787D39626048</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>41B845FD-18FA-74B5-6D73-F28A3D8A70B1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="spotid" id="2BCB2965-2651-1324-BC58-BD36FC67BBAE">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>D1636F1B-602E-0944-8938-22F9A65762E4</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>0DF3690E-DABB-5891-FC8C-C269EFBC0903</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D94AC7D7-8759-5EB9-82F6-57C5B0E74B7E" name="Motorcycles PK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>B58B1CEC-5608-979F-0F31-852703C208E2</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BBD1CDE3-DB5D-5669-D180-E165141033BD</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="B87DF392-4C36-0325-99D4-A36311CB7FBF" name="INDEX 1">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>50283474-5BB4-644A-2395-8FC63A6F3782</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>2BCB2965-2651-1324-BC58-BD36FC67BBAE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

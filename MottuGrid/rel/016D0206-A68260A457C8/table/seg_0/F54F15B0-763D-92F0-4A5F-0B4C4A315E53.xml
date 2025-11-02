@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F54F15B0-763D-92F0-4A5F-0B4C4A315E53" name="logs">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>2BAC9C1E-E1A5-EC72-A601-BBCDA9D10E38</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EF75AAB3-79E0-E17E-F81E-3CC57442B88E">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>ADE872D4-3667-BE38-5FB4-40EAAA380C6F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="message" id="6F6CAE20-646A-5DB1-71A1-533A9E66AAE1">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>1FC36459-AD44-1537-DD96-92335AB25EA9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EDF7BBB6-3346-5D46-7C45-07A12D8FCF7C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="0C0795A2-BDFD-7737-BA78-E5783D29B19B">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>84433FB0-3339-BB4F-DD41-E81314A4A106</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>41B845FD-18FA-74B5-6D73-F28A3D8A70B1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="motorcycle_id" id="FAEBA0B5-4330-AA5C-A51C-BD897534E888">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>8B94D32C-5973-084A-4E44-F1BA09E40C4F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84B0042A-1249-CBF1-1CEB-FEBFE244B829" referredColumn="C58449DD-F9FC-B8CD-90EE-505DD57F5D4B"/>
+</associations>
+</Column>
+<Column name="previous_spot_id" id="6D0410B5-931B-B58D-21A0-5462D480BB26">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>C50332B9-BBF0-5434-5778-42B0AAE6BBC9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75CCEB42-D8A6-7027-5BE7-CA5A49316322" referredColumn="31B3C86A-6AB0-85C1-ABE7-46DE1FB58378"/>
+</associations>
+</Column>
+<Column name="destination_spot_id" id="B923D1A2-9BA9-BC1A-11A3-DE3910986198">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>02832476-64ED-6E7A-614F-3CD2A5106EAB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="40378C7A-C3A6-624E-D223-33DDF80FC420" referredColumn="31B3C86A-6AB0-85C1-ABE7-46DE1FB58378"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E1DBF61C-9E4E-B0FE-732F-E72E7A4245A3" name="logs_PK">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>6483CDCF-C8AF-E940-076A-E64BC628626F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF75AAB3-79E0-E17E-F81E-3CC57442B88E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0141BA8-4578-5308-DDAC-8CC80A099AB8" name="fk_logs_dest_spot">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B923D1A2-9BA9-BC1A-11A3-DE3910986198"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5723F9A5-14BB-75A0-0407-211D302B1276" name="fk_logs_motorcycle">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FAEBA0B5-4330-AA5C-A51C-BD897534E888"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37F50065-E3ED-E321-B083-06FDA8811ACC" name="fk_logs_prev_spot">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D0410B5-931B-B58D-21A0-5462D480BB26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

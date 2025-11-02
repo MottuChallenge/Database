@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="logs" directorySegmentName="seg_0" id="F54F15B0-763D-92F0-4A5F-0B4C4A315E53">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="created_at" id="0C0795A2-BDFD-7737-BA78-E5783D29B19B">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="previous_spot_id" id="6D0410B5-931B-B58D-21A0-5462D480BB26">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="message" id="6F6CAE20-646A-5DB1-71A1-533A9E66AAE1">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="destination_spot_id" id="B923D1A2-9BA9-BC1A-11A3-DE3910986198">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="EF75AAB3-79E0-E17E-F81E-3CC57442B88E">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="motorcycle_id" id="FAEBA0B5-4330-AA5C-A51C-BD897534E888">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_logs_prev_spot" id="37F50065-E3ED-E321-B083-06FDA8811ACC">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_logs_motorcycle" id="5723F9A5-14BB-75A0-0407-211D302B1276">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_logs_dest_spot" id="C0141BA8-4578-5308-DDAC-8CC80A099AB8">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="logs_PK" id="E1DBF61C-9E4E-B0FE-732F-E72E7A4245A3">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

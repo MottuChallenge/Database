@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="102BCEC9-B212-B933-5419-4DB0158E1C79" name="sector_points">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>3644E06F-CCD1-0D29-D2BA-CD61D11FCCA2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="033BE560-47A5-5822-F37E-60FD4F112469">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>63EA6EBD-D672-03ED-F6A9-3F9E53BAC465</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sector_id" id="7DCC33DE-507A-A719-3A9A-90DD2A447D05">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>BCD49857-2000-59D4-6D3E-0686698CCF63</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EDD0BA1B-BDCB-83C2-9F73-E02A9D3969C2" referredColumn="BA12255F-EA63-AE35-9156-21A78B1565CD"/>
+</associations>
+</Column>
+<Column name="point_order" id="6D26319A-6A4F-0BD4-E779-247742D63519">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>BA8F5BA5-344B-AD3B-4F51-1BA70957EBD5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C91F69F3-A344-9268-6418-CEF97685B1C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="x" id="0D7136A8-0AD2-7115-DAB4-633D0F44D898">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>462F7882-9AD3-3074-7038-D422AA441E17</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C91F69F3-A344-9268-6418-CEF97685B1C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="y" id="D067662E-5CB3-0918-C96A-0869A4C7E726">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>A8AB86F7-20EF-B25B-94DA-DDBC9B92D4D2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C91F69F3-A344-9268-6418-CEF97685B1C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6EC724F9-B7F7-A94D-39CD-19DE0B04AB5C" name="sector_points_PK">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>BEEE4C00-126D-A4AB-BF73-2216F2FE6531</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="033BE560-47A5-5822-F37E-60FD4F112469"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="016BC0A3-5A1B-08ED-1F19-76E72A6376EF" name="fk_sector_points_sector">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7DCC33DE-507A-A719-3A9A-90DD2A447D05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

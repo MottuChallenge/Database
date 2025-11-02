@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="A5DAD41C-2A0D-0D84-51CB-ADC04285C726">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 21:59:58 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

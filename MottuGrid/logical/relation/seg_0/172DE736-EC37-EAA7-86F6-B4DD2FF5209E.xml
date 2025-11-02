@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_logs_prev_spot" directorySegmentName="seg_0" id="172DE736-EC37-EAA7-86F6-B4DD2FF5209E">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>75CCEB42-D8A6-7027-5BE7-CA5A49316322</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<sourcePk>3128A217-780E-184D-C638-CA48FDC0B2DB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8C13CE2C-0BE9-3E31-6B80-399809E3F62C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9C2C2449-2BCF-4A8B-6C90-D01CFE8AD9DF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MottuGrid" id="677B9EDC-9FF0-9141-0860-7A01D90A9BFC" version="3.5">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 21:59:58 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>677B9EDC-9FF0-9141-0860-7A01D90A9BFC</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="73A89058-3363-5D5B-A8E6-39FA578F568E">
+<designStoragePath>C:\drop_create</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

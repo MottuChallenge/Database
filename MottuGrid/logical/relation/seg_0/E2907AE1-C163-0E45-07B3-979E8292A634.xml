@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_yards_address" directorySegmentName="seg_0" id="E2907AE1-C163-0E45-07B3-979E8292A634">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>7DE6E925-43DB-13D4-5713-AFFCEF03C77D</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<sourcePk>08B84BA6-6199-E3BB-4ABC-75E9681437E5</sourcePk>
+<dominantRole>49AD9961-7A9B-12BF-6073-23694926A9A6</dominantRole>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>49AD9961-7A9B-12BF-6073-23694926A9A6</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>399E400C-D78F-6331-DD9E-C3E8EF6499AC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

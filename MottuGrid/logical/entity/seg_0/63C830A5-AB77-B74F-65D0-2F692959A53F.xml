@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="63C830A5-AB77-B74F-65D0-2F692959A53F" name="yard points">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>87916CF9-187A-4D04-4214-61330BF5D7BB</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="5094856C-9A6D-B827-79F2-07A7ECFEB5AB">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>3B1244EC-A0E1-AAD3-C20E-ACBF6324E285</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="yard id" id="B8489803-5395-029D-49D9-52A7B3AE5944">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>CB6B089E-8C2C-03A3-76A6-70852EA85BD3</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<referedAttribute>102E860B-EDF6-DD72-638E-F6715940D60B</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>F725448C-FDE6-7EEB-3573-96B773589724</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="point order" id="CDE768DC-D7D0-A5E4-0E80-BEB4F11E4CE7">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>55B6EADE-6A67-B478-B307-B9782285324C</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C91F69F3-A344-9268-6418-CEF97685B1C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="x" id="CBC23481-46B9-3B43-9861-288024AA052B">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>5A7332B9-6A84-5725-BE9A-17A4BDD7809F</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C91F69F3-A344-9268-6418-CEF97685B1C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="y" id="F72ACFEB-3859-E9DA-7F42-969843A8983B">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>2B8AC4A5-47E3-9CC5-D0CE-13447CFF46F3</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C91F69F3-A344-9268-6418-CEF97685B1C0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FAB1A0D2-0FBB-DFA4-2CAA-93861D3733AB" name="yard points PK">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>B5744CD4-DBDA-2313-35CD-24DBB77B9127</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5094856C-9A6D-B827-79F2-07A7ECFEB5AB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

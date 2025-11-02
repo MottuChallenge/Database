@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_spots_sector" directorySegmentName="seg_0" id="6E0C7E13-AD6F-377F-F9A9-7F3B9ADE005C">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>264EF530-8187-8BAA-1111-64E420393F42</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<sourcePk>D47C98EE-1C90-DE1F-8E41-2C344B293C42</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>086D70E7-BACE-387B-1C2C-67EC27F833F3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8C13CE2C-0BE9-3E31-6B80-399809E3F62C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="92B5F9B4-BB65-2C14-E06E-5F4EA06513DD" mainViewID="6DE016A8-BF60-E0F0-A5D4-FDDB269D49A8">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 21:59:58 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
