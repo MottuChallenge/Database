@@ -1,0 +1,42 @@
+[
+  {
+    "id": "log0001-0000-0000-0000-000000000001 ",
+    "message": "Moved to new spot",
+    "created_at": "2024-06-01T00:00:00",
+    "motorcycle_id": "moto0001-0000-0000-0000-000000000001",
+    "previous_spot_id": "spot0001-0000-0000-0000-000000000001",
+    "destination_spot_id": "spot0002-0000-0000-0000-000000000002"
+  },
+  {
+    "id": "log0002-0000-0000-0000-000000000002 ",
+    "message": "Routine check",
+    "created_at": "2024-06-02T00:00:00",
+    "motorcycle_id": "moto0002-0000-0000-0000-000000000002",
+    "previous_spot_id": "spot0002-0000-0000-0000-000000000002",
+    "destination_spot_id": "spot0003-0000-0000-0000-000000000003"
+  },
+  {
+    "id": "log0003-0000-0000-0000-000000000003 ",
+    "message": "Maintenance",
+    "created_at": "2024-06-03T00:00:00",
+    "motorcycle_id": "moto0003-0000-0000-0000-000000000003",
+    "previous_spot_id": "spot0003-0000-0000-0000-000000000003",
+    "destination_spot_id": "spot0004-0000-0000-0000-000000000004"
+  },
+  {
+    "id": "log0004-0000-0000-0000-000000000004 ",
+    "message": "Inspection",
+    "created_at": "2024-06-04T00:00:00",
+    "motorcycle_id": "moto0004-0000-0000-0000-000000000004",
+    "previous_spot_id": "spot0004-0000-0000-0000-000000000004",
+    "destination_spot_id": "spot0005-0000-0000-0000-000000000005"
+  },
+  {
+    "id": "log0005-0000-0000-0000-000000000005 ",
+    "message": "Returned",
+    "created_at": "2024-06-05T00:00:00",
+    "motorcycle_id": "moto0005-0000-0000-0000-000000000005",
+    "previous_spot_id": "spot0005-0000-0000-0000-000000000005",
+    "destination_spot_id": "spot0001-0000-0000-0000-000000000001"
+  }
+]
