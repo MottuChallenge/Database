@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D9AEF26C-1011-46C2-4575-776552A32926" containerWithKeyObject="012C90A2-183C-A38E-478F-156B2B8B028A" localFKIndex="0F2A4586-9013-606B-9CF2-990010F1DE2E" name="fk_sectors_yard">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>914591BE-0818-D06C-36FE-5E0E3B5E732C</importedID>
+<referredTableLongName>yards</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>96236FA7-8142-1090-7E30-F4230FA799EA</referredTableID>
+<keyObject>630F4C65-43B3-BADD-A5F3-ABE434713254</keyObject>
+<referredKeyID>630F4C65-43B3-BADD-A5F3-ABE434713254</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,185 @@
+[
+  {
+    "id": "yard0001-0000-0000-0000-000000000001",
+    "name": "Yard One",
+    "address": {
+      "street": "Main St",
+      "number": 100,
+      "neighborhood": "Downtown",
+      "city": "Metropolis",
+      "state": "StateA",
+      "zip_code": "12345678",
+      "country": "CountryX"
+    },
+    "sectors": [
+      {
+        "id": "sect0001-0000-0000-0000-000000000001",
+        "type": "Type A",
+        "spots": [
+          {
+            "id": "spot0001-0000-0000-0000-000000000001",
+            "x": 10,
+            "y": 20,
+            "status": "FREE",
+            "motorcycle": {
+              "id": "moto0001-0000-0000-0000-000000000001",
+              "model": "Model X",
+              "enginetype": "COMBUSTION",
+              "plate": "ABC1234",
+              "last_revision_date": "2024-01-01T00:00:00"
+            }
+          },
+          {
+            "id": "spot0001-0000-0000-0000-000000000002",
+            "x": 10,
+            "y": 30,
+            "status": "FREE",
+            "motorcycle": {
+              "id": "moto0001-0000-0000-0000-000000000006",
+              "model": "Model H",
+              "enginetype": "COMBUSTION",
+              "plate": "ABC1235",
+              "last_revision_date": "2024-01-01T00:00:00"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yard0002-0000-0000-0000-000000000002",
+    "name": "Yard Two",
+    "address": {
+      "street": "Second Ave",
+      "number": 200,
+      "neighborhood": "Uptown",
+      "city": "Gotham",
+      "state": "StateB",
+      "zip_code": "87654321",
+      "country": "CountryY"
+    },
+    "sectors": [
+      {
+        "id": "sect0002-0000-0000-0000-000000000002",
+        "type": "Type B",
+        "spots": [
+          {
+            "id": "spot0002-0000-0000-0000-000000000002",
+            "x": 15,
+            "y": 25,
+            "status": "OCCUPIED",
+            "motorcycle": {
+              "id": "moto0002-0000-0000-0000-000000000002",
+              "model": "Model Y",
+              "enginetype": "COMBUSTION",
+              "plate": "DEF5678",
+              "last_revision_date": "2024-02-01T00:00:00"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yard0003-0000-0000-0000-000000000003",
+    "name": "Yard Three",
+    "address": {
+      "street": "Third Blvd",
+      "number": 300,
+      "neighborhood": "Midtown",
+      "city": "Star City",
+      "state": "StateC",
+      "zip_code": "11223344",
+      "country": "CountryZ"
+    },
+    "sectors": [
+      {
+        "id": "sect0003-0000-0000-0000-000000000003",
+        "type": "Type C",
+        "spots": [
+          {
+            "id": "spot0003-0000-0000-0000-000000000003",
+            "x": 20,
+            "y": 30,
+            "status": "FREE",
+            "motorcycle": {
+              "id": "moto0003-0000-0000-0000-000000000003",
+              "model": "Model Z",
+              "enginetype": "COMBUSTION",
+              "plate": "GHI9012",
+              "last_revision_date": "2024-03-01T00:00:00"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yard0004-0000-0000-0000-000000000004",
+    "name": "Yard Four",
+    "address": {
+      "street": "Fourth Rd",
+      "number": 400,
+      "neighborhood": "Oldtown",
+      "city": "Central City",
+      "state": "StateD",
+      "zip_code": "44332211",
+      "country": "CountryW"
+    },
+    "sectors": [
+      {
+        "id": "sect0004-0000-0000-0000-000000000004",
+        "type": "Type D",
+        "spots": [
+          {
+            "id": "spot0004-0000-0000-0000-000000000004",
+            "x": 25,
+            "y": 35,
+            "status": "OCCUPIED",
+            "motorcycle": {
+              "id": "moto0004-0000-0000-0000-000000000004",
+              "model": "Model W",
+              "enginetype": "COMBUSTION",
+              "plate": "JKL3456",
+              "last_revision_date": "2024-04-01T00:00:00"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yard0005-0000-0000-0000-000000000005",
+    "name": "Yard Five",
+    "address": {
+      "street": "Fifth Ln",
+      "number": 500,
+      "neighborhood": "Newtown",
+      "city": "Coast City",
+      "state": "StateE",
+      "zip_code": "55667788",
+      "country": "CountryV"
+    },
+    "sectors": [
+      {
+        "id": "sect0005-0000-0000-0000-000000000005",
+        "type": "Type E",
+        "spots": [
+          {
+            "id": "spot0005-0000-0000-0000-000000000005",
+            "x": 30,
+            "y": 40,
+            "status": "FREE",
+            "motorcycle": {
+              "id": "moto0005-0000-0000-0000-000000000005",
+              "model": "Model V",
+              "enginetype": "ELECTRIC",
+              "plate": "MNO7890",
+              "last_revision_date": "2024-05-01T00:00:00"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

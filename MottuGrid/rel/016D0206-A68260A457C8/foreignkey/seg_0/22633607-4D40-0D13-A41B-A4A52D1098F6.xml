@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="22633607-4D40-0D13-A41B-A4A52D1098F6" containerWithKeyObject="BD86232B-B1F6-90BB-9643-10FBE8FFAA34" localFKIndex="AB9188CA-50B6-281B-6846-C958F0489C47" name="fk_motorcycles_spot">
+<sourceDDLFile>drop_create.sql</sourceDDLFile>
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:00:54 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<importedID>DED27237-F022-F353-F956-993D1C365110</importedID>
+<referredTableLongName>spots</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AEDAEB86-7A85-6524-21B3-0693CC6DCBE9</referredTableID>
+<keyObject>8C66EA64-56EE-F5E5-5F38-AD583378F2D6</keyObject>
+<referredKeyID>8C66EA64-56EE-F5E5-5F38-AD583378F2D6</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>spot_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,11 @@
+docker run -d --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=senha123 mongo:6
+
+docker cp "C:\Users\Pedro Henrique\Documents\mottu\MottuGrid-Database\yards.json" mongodb:/yards.json 
+docker cp "C:\Users\Pedro Henrique\Documents\mottu\MottuGrid-Database\logs.json" mongodb:/logs.json 
+docker exec -it mongodb mongoimport --db mydb --collection yards --file /yards.json --jsonArray --username admin --password senha123 --authenticationDatabase admin
+docker exec -it mongodb mongoimport --db mydb --collection logs --file /logs.json --jsonArray --username admin --password senha123 --authenticationDatabase admin
+
+docker exec -it mongodb mongosh -u admin -p senha123 --authenticationDatabase admin
+use mydb
+db.yards.find().pretty()
+db.logs.find().pretty()

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_motorcycles_spot" directorySegmentName="seg_0" id="D1636F1B-602E-0944-8938-22F9A65762E4">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 22:01:25 UTC</createdTime>
+<generatorID>22633607-4D40-0D13-A41B-A4A52D1098F6</generatorID>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<engineerTo>
+<item key="016D0206-F9E7-E847-9C95-A68260A457C8" value="true"/>
+</engineerTo>
+<sourcePk>3128A217-780E-184D-C638-CA48FDC0B2DB</sourcePk>
+<dominantRole>8C13CE2C-0BE9-3E31-6B80-399809E3F62C</dominantRole>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8C13CE2C-0BE9-3E31-6B80-399809E3F62C</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>830FB2B9-331A-7761-FBDC-FB39E0D8086A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

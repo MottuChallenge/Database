@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="016D0206-F9E7-E847-9C95-A68260A457C8" mainViewID="FE34A9B3-48D9-B611-2F03-4CAE23BCDB98">
+<createdBy>Pedro Henrique</createdBy>
+<createdTime>2025-11-02 21:59:58 UTC</createdTime>
+<ownerDesignName>MottuGrid</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>drop_create.sql</fileName>
+<pathName>C:\Users\Pedro Henrique\Documents\mottu\MottuGrid-Database</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>
