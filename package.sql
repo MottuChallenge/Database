@@ -1,4 +1,6 @@
--- pkg_spots
+-- ==============================
+-- PACKAGE: pkg_spots
+-- ==============================
 CREATE OR REPLACE PACKAGE pkg_spots AS
   FUNCTION fn_spot_para_json(p_spot_id IN CHAR) RETURN VARCHAR2;
   PROCEDURE prc_spots_com_sector_json;
@@ -8,12 +10,13 @@ END pkg_spots;
 
 CREATE OR REPLACE PACKAGE BODY pkg_spots AS
 
+  -- Função que retorna uma vaga em formato JSON
   FUNCTION fn_spot_para_json(p_spot_id IN CHAR) RETURN VARCHAR2 IS
-      v_spot_id      SPOTS.SPOT_ID%TYPE;
-      v_sector_id    SPOTS.SECTOR_ID%TYPE;
-      v_status       SPOTS.STATUS%TYPE;
+      v_spot_id       SPOTS.SPOT_ID%TYPE;
+      v_sector_id     SPOTS.SECTOR_ID%TYPE;
+      v_status        SPOTS.STATUS%TYPE;
       v_motorcycle_id SPOTS.MOTORCYCLE_ID%TYPE;
-      v_json         VARCHAR2(4000);
+      v_json          VARCHAR2(4000);
   BEGIN
       SELECT SPOT_ID, SECTOR_ID, STATUS, NVL(MOTORCYCLE_ID, 'NULL')
       INTO v_spot_id, v_sector_id, v_status, v_motorcycle_id
@@ -37,6 +40,8 @@ CREATE OR REPLACE PACKAGE BODY pkg_spots AS
           RETURN '{"erro": "Erro inesperado: ' || SQLERRM || '"}';
   END fn_spot_para_json;
 
+
+  -- Procedure que retorna todas as vagas com seus setores em JSON
   PROCEDURE prc_spots_com_sector_json IS
       CURSOR c_spots IS
           SELECT s.SPOT_ID, s.STATUS, s.X, s.Y, s.MOTORCYCLE_ID,
@@ -81,6 +86,7 @@ CREATE OR REPLACE PACKAGE BODY pkg_spots AS
   END prc_spots_com_sector_json;
 
 
+  -- Procedure que gera relatório de motos por vaga
   PROCEDURE relatorio_motos_por_vaga IS
       CURSOR c_spots IS
           SELECT s.id AS sector_id,
@@ -139,51 +145,80 @@ CREATE OR REPLACE PACKAGE BODY pkg_spots AS
 END pkg_spots;
 /
 
--- pkg_utils
+-- ==============================
+-- TESTES: pkg_spots
+-- ==============================
+SET SERVEROUTPUT ON;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('--- Teste fn_spot_para_json ---');
+  DBMS_OUTPUT.PUT_LINE(pkg_spots.fn_spot_para_json('SPOT001'));
+
+  DBMS_OUTPUT.PUT_LINE('--- Teste prc_spots_com_sector_json ---');
+  pkg_spots.prc_spots_com_sector_json;
+
+  DBMS_OUTPUT.PUT_LINE('--- Teste relatorio_motos_por_vaga ---');
+  pkg_spots.relatorio_motos_por_vaga;
+END;
+/
+
+-- ==============================
+-- PACKAGE: pkg_utils
+-- ==============================
 CREATE OR REPLACE PACKAGE pkg_utils AS
   FUNCTION fn_validate_plate(p_plate IN VARCHAR2) RETURN VARCHAR2;
 END pkg_utils;
 /
 
-CREATE OR REPLACE FUNCTION fn_validate_plate(p_plate IN VARCHAR2)
-RETURN VARCHAR2 IS
-  -- Declaração das exceções personalizadas
-  e_plate_null EXCEPTION;
-  e_invalid_length EXCEPTION;
-  e_invalid_format EXCEPTION;
+CREATE OR REPLACE PACKAGE BODY pkg_utils AS
+  FUNCTION fn_validate_plate(p_plate IN VARCHAR2) RETURN VARCHAR2 IS
+    e_plate_null EXCEPTION;
+    e_invalid_length EXCEPTION;
+    e_invalid_format EXCEPTION;
+  BEGIN
+    IF p_plate IS NULL THEN
+      RAISE e_plate_null;
+    END IF;
+
+    IF LENGTH(p_plate) NOT IN (7, 8) THEN
+      RAISE e_invalid_length;
+    END IF;
+
+    IF NOT (REGEXP_LIKE(p_plate, '^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$')
+         OR REGEXP_LIKE(p_plate, '^[A-Z]{3}[0-9]{4}$')) THEN
+      RAISE e_invalid_format;
+    END IF;
+
+    RETURN 'Placa válida: ' || p_plate;
+
+  EXCEPTION
+    WHEN e_plate_null THEN
+      RETURN 'Erro: A placa não pode ser nula.';
+    WHEN e_invalid_length THEN
+      RETURN 'Erro: Placa deve ter 7 ou 8 caracteres.';
+    WHEN e_invalid_format THEN
+      RETURN 'Erro: Placa inválida — formato incorreto.';
+    WHEN OTHERS THEN
+      RETURN 'Erro inesperado: ' || SQLERRM;
+  END fn_validate_plate;
+END pkg_utils;
+/
+
+-- ==============================
+-- TESTES: pkg_utils
+-- ==============================
+SET SERVEROUTPUT ON;
 BEGIN
-  -- Verifica se a placa é nula
-  IF p_plate IS NULL THEN
-    RAISE e_plate_null;
-  END IF;
-
-  -- Verifica tamanho inválido
-  IF LENGTH(p_plate) NOT IN (7, 8) THEN
-    RAISE e_invalid_length;
-  END IF;
-
-  -- Verifica se corresponde ao padrão AAA0A00 ou AAA0000
-  IF NOT (REGEXP_LIKE(p_plate, '^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$')
-          OR REGEXP_LIKE(p_plate, '^[A-Z]{3}[0-9]{4}$')) THEN
-    RAISE e_invalid_format;
-  END IF;
-
-  RETURN 'Placa válida: ' || p_plate;
-
-EXCEPTION
-  WHEN e_plate_null THEN
-    RETURN 'Erro: A placa não pode ser nula.';
-  WHEN e_invalid_length THEN
-    RETURN 'Erro: Placa deve ter 7 ou 8 caracteres.';
-  WHEN e_invalid_format THEN
-    RETURN 'Erro: Placa inválida — formato incorreto.';
-  WHEN OTHERS THEN
-    RETURN 'Erro inesperado: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE('--- Teste fn_validate_plate ---');
+  DBMS_OUTPUT.PUT_LINE(pkg_utils.fn_validate_plate('ABC1234'));
+  DBMS_OUTPUT.PUT_LINE(pkg_utils.fn_validate_plate('ABC1D23'));
+  DBMS_OUTPUT.PUT_LINE(pkg_utils.fn_validate_plate('1234567'));
+  DBMS_OUTPUT.PUT_LINE(pkg_utils.fn_validate_plate(NULL));
 END;
 /
 
--- pkg_auditoria
-
+-- ==============================
+-- PACKAGE: pkg_auditoria
+-- ==============================
 CREATE OR REPLACE PACKAGE pkg_auditoria AS
   PROCEDURE registrar_auditoria(
     p_old_values IN VARCHAR2,
@@ -192,6 +227,7 @@ CREATE OR REPLACE PACKAGE pkg_auditoria AS
   );
 END pkg_auditoria;
 /
+
 CREATE OR REPLACE PACKAGE BODY pkg_auditoria AS
   PROCEDURE registrar_auditoria(
     p_old_values IN VARCHAR2,
@@ -216,6 +252,9 @@ CREATE OR REPLACE PACKAGE BODY pkg_auditoria AS
 END pkg_auditoria;
 /
 
+-- ==============================
+-- TRIGGER: auditoria de motocicletas
+-- ==============================
 CREATE OR REPLACE TRIGGER trg_motorcycles_audit
 AFTER INSERT OR UPDATE OR DELETE ON Motorcycles
 FOR EACH ROW
@@ -243,3 +282,4 @@ BEGIN
   pkg_auditoria.registrar_auditoria(v_old_values, v_new_values, v_operation);
 END;
 /
+

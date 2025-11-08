@@ -23,9 +23,9 @@
             "status": "FREE",
             "motorcycle": {
               "id": "moto0001-0000-0000-0000-000000000001",
-              "model": "Honda CG 160 Titan",
+              "model": "Model X",
               "enginetype": "COMBUSTION",
-              "plate": "XYZ9876",
+              "plate": "ABC1234",
               "last_revision_date": "2024-01-01T00:00:00"
             }
           },
